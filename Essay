@@ -1,0 +1,44 @@
+1.  $_GET dipergunakan terutama untuk melakukan request pada server dengan data yang disimpan pada query string. request ini akan tersimpan pada cache dan history serta dapat pula kita simpan di bookmark sehingga tidak disarankan untuk operasi yang melibatkan data-data sensitif.
+    $_POST dipergunakan untuk mengirim data pada server, berbeda dengan GET, pengiriman data dengan cara ini tidak dibatasi size limit dan aman untuk operasi yang melibatkan data2 sensitif.
+
+2.  Namespacing dipergunakan untuk memilah object ke dalam group2 tertentu sehingga memudahkan penyusunan logic dan design
+
+3.  Saya kurang paham dengan magic methods yang disebut, tapi berdasar apa yang telah saya baca hal tersebut dipakai pada pemrograman PHP untuk inisiasi/modifikasi object instant
+
+4.  - global berarti variable dapat diakses secara global dan tidak terbatas pada suatu namespace (kurang yakin)
+    - use untuk menggunakan namespace tertentu pada code
+    - static
+    - public, dapat diakses dan dimodifikasi baik dari dalam ataupun dari luar sebuah lingkup object
+    - protected dapat diakses dari luar cakupan fungsi/object, tetapi value-nya hanya dapat di modifikasi dari dalam lingkup yang bersangkutan
+    - private hanya dapat diakses dari dalam lingkup fungsi/object dan hanya dipergunakan dalam lingkup tersebut
+    - self
+    - final, value tidak akan bisa di modif setelah inisiasi mungkin mirip const pada ES 6
+
+5.  - interface, saya kurang yakin dengan ruang lingkup yang dimaksud, tapi sepemahaman saya sebuah interface adalah semacam class untuk mengumpulkan methods dari berbagai object
+        dengan drawback computation speed akan berkurang karena untuk setiap method yang ada hanyalah suatu referensi dari object lainnya tanpa adanya penambahan code.
+    - abstract
+
+6. tight coupling dan loose coupling berhubungan dengan dependensi antar variable pada sebuah object.
+
+7. Closure adalah suatu ruang lingkup methods
+
+8. Pass
+
+9. MVC adalah satu siklus arsitektur sebuah aplikasi dimana design tersebut dibagi ke dalam tiga bagian utama, yaitu view/ui dimana user bisa melihat tampilan aplikasi,
+    kemudian controller sebagai penghubung user dengan model/logic yang kemudian akan mempengaruhi perubahan pada view
+   HMVC jika digambarkan akan seperti sebuah jaringan logic/model dimana setiap node dapat terhubung dengan logic-node lainnya secara hierarki.
+
+10. Pass
+
+11. Pass
+
+
+note:
+
+Jawaban saya diatas berdasar referensi pengalaman pada c#, js, dan java, dan untuk soal2 yang erat hubungannya dengan php saya skip karena untuk sekarang saya sama sekali belum menguasai php.
+Lama pengerjaan test praktek sangat berhubungan dengan kekurangan saya pada front end.
+
+inisiasi server :
+
+semua modul2 yang diperlukan sudah terdaftar dalam package.json, tinggal instal kecuali untuk rethinkdb yang harus dilakukan instalasi terpisah.
+setelah running, server dapat diakses pada port : 1116.

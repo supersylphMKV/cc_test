@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+        link(href='/modules/font-awesome/css/font-awesome.css' rel='stylesheet')
+        link(href='/mainStyle.css' rel='stylesheet')
+    body
+        div#main_window
+            div#emp_list
+                div#emp_list_window
+                    div#emp_list_tab(style='display:flex;background-color:lightsteelblue;border-bottom:solid thin slategrey;')
+                        div.acc-btn [department]
+                    ul#emp_list_body(style='list-style-type:none;')
+                        li [karyawan]
+                input#emp_search(placeholder='Cari Karyawan...')
+            div#emp_ctrl
+                div#emp_db
+                    form#emp_add.app-body(name='form_emp_new')
+                        div.text-bold Tambah Data Karyawan
+                        div.flex-column
+                            label Nama Lengkap
+                            input(name='first_name' placeholder='Nama Depan')
+                            input(name='last_name' placeholder='Nama Belakang')
+                        div.flex-column
+                            label Tempat/Tanggal Lahir
+                            input(name='pob' placeholder='Tempat Lahir')
+                            input(name='dob' type='date')
+                        div.flex-column
+                            label Kontak
+                            input(name='phone' placeholder='No. Telp')
+                            input(name='mail' placeholder='alamat@email.com')
+                            textarea(name='address' style='resize:none')
+                        div(style='height:16px;')
+                        div.flex-column#emp_dept_ctrl
+                            select(name='dept')
+                                option(value='add') Tambahkan Department...
+                            div(style='display:flex;')
+                                input(name='other_dept' style='flex:auto;')
+                                button#emp_dept_add(type='button') Tambah Department
+                        div(style='height:24px;')
+                        div.flex-column
+                            input.text-bold(type='submit' value='Tambah Data')
+                div#emp_info
+                    form#emp_data.app-body(name='form_emp_info')
+                        div.text-bold Update Data Karyawan
+                        div.flex-column
+                            label Nama Lengkap
+                            input(name='first_name' placeholder='Nama Depan')
+                            input(name='last_name' placeholder='Nama Belakang')
+                        div.flex-column
+                            label Tempat/Tanggal Lahir
+                            input(name='pob' placeholder='Tempat Lahir')
+                            input(name='dob' type='date')
+                        div.flex-column
+                            label Kontak
+                            input(name='phone' placeholder='No. Telp')
+                            input(name='mail' placeholder='alamat@email.com')
+                            textarea(name='address' style='resize:none')
+                        div(style='height:16px;')
+                        div.flex-column
+                            select(name='dept')
+                        div(style='height:24px;')
+                        div.flex-column
+                            input.text-bold(type='submit' value='Update Data')
+        script(src='/modules/socket.io-client/dist/socket.io.js')
+        script(src='/modules/jquery/dist/jquery.min.js')
+        script(src='/scripts/main-ui.js')

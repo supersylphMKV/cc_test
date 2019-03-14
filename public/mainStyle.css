@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    font-family: Arial;
+}
+
+.text-bold{
+    font-weight: bolder;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.app-body{
+    padding: 16px;
+}
+.acc-btn{
+    background-color: darkgray;
+    border-right: solid thin lightgray;
+    padding: 8px;
+    cursor: pointer;
+}
+.acc-btn-active{
+    background-color: ghostwhite;
+}
+
+#main_window{
+    background-color: lightsteelblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+#emp_list{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+#emp_list_title{
+    font-size: x-large;
+    font-weight: bold;
+    padding: 4px 0;
+}
+#emp_list_window{
+    flex:auto;
+    background-color: ghostwhite;
+}
+#emp_ctrl{
+    flex: 1;
+}
+#emp_db{
+    padding-top: 42px;
+    padding-right: 8px;
+}
+#emp_info{
+    padding-top: 16px;
+    padding-right: 8px;
+}
+#emp_add,#emp_data{
+    border: solid thin grey;
+}
